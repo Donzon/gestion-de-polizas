@@ -45,13 +45,11 @@ export class PoliciesController {
     return this.policiesService.updateStatus(id);
   }
 
-  // PATCH /policies/:id - Actualiza otros campos de la póliza
   @Patch(':id')
   update(@Param('id') id: string, @Body() updatePolizaDto: UpdatePolizaDto) {
     return this.policiesService.update(id, updatePolizaDto);
   }
 
-  // DELETE /policies/:id - Elimina una póliza
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.policiesService.remove(id);
