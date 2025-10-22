@@ -12,6 +12,7 @@ import {
 import { PoliciesService } from './policies.service';
 import { CreatePolizaDto } from './dto/create-poliza.dto';
 import { UpdatePolizaDto } from './dto/update-poliza.dto';
+import { QueryParams } from './interfaces/policy.interfaces';
 
 @Controller('policies')
 export class PoliciesController {
@@ -25,11 +26,8 @@ export class PoliciesController {
 
   // GET /policies - Lista todas las pólizas (con filtro opcional por estado o fecha de emisión)
   @Get()
-  findAll(
-    @Query('estado') estado?: string,
-    @Query('fechaEmision') fechaEmision?: string,
-  ) {
-    const filtros = { estado, fechaEmision };
+  findAll(@Query() query: QueryParams) {
+    const filtros = { estado: query.estado, fechaEmision: query.fechaEmision };
     return this.policiesService.findAll(filtros);
   }
 
