@@ -347,7 +347,7 @@ PORT=3000
 
 Si tienes preguntas o necesitas ayuda:
 
-- 📧 Email: [tu-email@ejemplo.com]
+- 📧 Email: [f.daza.v@gmail.com]
 - 🐛 Issues: [GitHub Issues](https://github.com/tu-usuario/gestion-polizas/issues)
 - 📖 Documentación: [NestJS Docs](https://docs.nestjs.com/)
 
